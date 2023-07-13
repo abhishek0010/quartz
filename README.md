@@ -17,3 +17,5 @@ Check out some of the [amazing gardens that community members](https://quartz.jz
 ![Quartz Example Screenshot](./screenshot.png)*Quartz Example Screenshot*
 
 [Join the Discord Community](https://discord.gg/cRFFHYye7t)
+
+TODO: Create my readme, cleanup the contents, create a utility to populate an index page
