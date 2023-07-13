@@ -1,0 +1,965 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=description content="Javascripts notes   Date Modified : 16-12-2022
+Tags: #javascript #languages #publish
+ `Javascript. To Prepare Frameworks Explainers:
+ [[ReactJS]] [[NextJS]]  Package Managers:"><meta property="og:title" content="Javascript"><meta property="og:description" content="Javascripts notes   Date Modified : 16-12-2022
+Tags: #javascript #languages #publish
+ `Javascript. To Prepare Frameworks Explainers:
+ [[ReactJS]] [[NextJS]]  Package Managers:"><meta property="og:type" content="website"><meta property="og:image" content="https://abhishek0010.github.io/quartz/icon.png"><meta property="og:url" content="https://abhishek0010.github.io/quartz/Javascript/"><meta property="og:width" content="200"><meta property="og:height" content="200"><meta name=twitter:card content="summary"><meta name=twitter:title content="Javascript"><meta name=twitter:description content="Javascripts notes   Date Modified : 16-12-2022
+Tags: #javascript #languages #publish
+ `Javascript. To Prepare Frameworks Explainers:
+ [[ReactJS]] [[NextJS]]  Package Managers:"><meta name=twitter:image content="https://abhishek0010.github.io/quartz/icon.png"><meta name=twitter:site content="_jzhao"><title>Javascript</title><meta name=viewport content="width=device-width,initial-scale=1"><link rel="shortcut icon" type=image/png href=https://abhishek0010.github.io/quartz//icon.png><link href=https://abhishek0010.github.io/quartz/styles.19109a40042e9f0e72e952fda4442a34.min.css rel=stylesheet><link href=https://abhishek0010.github.io/quartz/styles/_light_syntax.86a48a52faebeaaf42158b72922b1c90.min.css rel=stylesheet id=theme-link><script src=https://abhishek0010.github.io/quartz/js/darkmode.8625d2b9dad9c8f75c33f78f66fbc958.min.js></script>
+<script src=https://abhishek0010.github.io/quartz/js/util.00639692264b21bc3ee219733d38a8be.min.js></script>
+<link rel=preload href=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css as=style onload='this.onload=null,this.rel="stylesheet"' integrity=sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js integrity=sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx crossorigin=anonymous></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js integrity=sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR crossorigin=anonymous></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/copy-tex.min.js integrity=sha384-ww/583aHhxWkz5DEVn6OKtNiIaLi2iBRNZXfJRiY1Ai7tnJ9UXpEsyvOITVpTl4A crossorigin=anonymous></script>
+<script src=https://cdn.jsdelivr.net/npm/@floating-ui/core@1.2.1></script>
+<script src=https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.2.1></script>
+<script defer src=https://abhishek0010.github.io/quartz/js/popover.aa9bc99c7c38d3ae9538f218f1416adb.min.js></script>
+<script defer src=https://abhishek0010.github.io/quartz/js/code-title.ce4a43f09239a9efb48fee342e8ef2df.min.js></script>
+<script defer src=https://abhishek0010.github.io/quartz/js/clipboard.2913da76d3cb21c5deaa4bae7da38c9f.min.js></script>
+<script defer src=https://abhishek0010.github.io/quartz/js/callouts.7723cac461d613d118ee8bb8216b9838.min.js></script>
+<script>const SEARCH_ENABLED=!1,LATEX_ENABLED=!0,PRODUCTION=!0,BASE_URL="https://abhishek0010.github.io/quartz/",fetchData=Promise.all([fetch("https://abhishek0010.github.io/quartz/indices/linkIndex.70782742876612299a5b0de4c07ed4da.min.json").then(e=>e.json()).then(e=>({index:e.index,links:e.links})),fetch("https://abhishek0010.github.io/quartz/indices/contentIndex.465444b271c1579eaea3504d085e0f23.min.json").then(e=>e.json())]).then(([{index:e,links:t},n])=>({index:e,links:t,content:n})),render=()=>{const e=new URL(BASE_URL),t=e.pathname,n=window.location.pathname,s=t==n;addCopyButtons(),addTitleToCodeBlocks(),addCollapsibleCallouts(),initPopover("https://abhishek0010.github.io/quartz",!0);const o=document.getElementById("footer");if(o){const e=document.getElementById("graph-container");if(!e)return requestAnimationFrame(render);e.textContent="";const t=s&&!1;drawGraph("https://abhishek0010.github.io/quartz",t,[{"/moc":"#4388cc"}],t?{centerForce:1,depth:-1,enableDrag:!0,enableLegend:!1,enableZoom:!0,fontSize:.5,linkDistance:1,opacityScale:3,repelForce:1,scale:1.4}:{centerForce:1,depth:1,enableDrag:!0,enableLegend:!1,enableZoom:!0,fontSize:.6,linkDistance:1,opacityScale:3,repelForce:2,scale:1.2})}var i=document.getElementsByClassName("mermaid");i.length>0&&import("https://unpkg.com/mermaid@9/dist/mermaid.esm.min.mjs").then(e=>{e.default.init()});function a(n){const e=n.target,t=e.className.split(" "),s=t.includes("broken"),o=t.includes("internal-link");plausible("Link Click",{props:{href:e.href,broken:s,internal:o,graph:!1}})}const r=document.querySelectorAll("a");for(link of r)link.className.includes("root-title")&&link.addEventListener("click",a,{once:!0})},init=(e=document)=>{addCopyButtons(),addTitleToCodeBlocks(),renderMathInElement(e.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}],macros:{'’':"'"},throwOnError:!1})}</script><script type=module>
+    import { attachSPARouting } from "https:\/\/abhishek0010.github.io\/quartz\/js\/router.d6fe6bd821db9ea97f9aeefae814d8e7.min.js"
+    attachSPARouting(init, render)
+  </script><script defer data-domain=abhishek0010.github.io/quartz src=https://plausible.io/js/script.js></script>
+<script>window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)}</script></head><body><div id=search-container><div id=search-space><input autocomplete=off id=search-bar name=search type=text aria-label=Search placeholder="Search for something..."><div id=results-container></div></div></div><script src=https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js integrity="sha256-i3A0NZGkhsKjVMzFxv3ksk0DZh3aXqu0l49Bbh0MdjE=" crossorigin=anonymous defer></script>
+<script defer src=https://abhishek0010.github.io/quartz/js/full-text-search.e6e2e0c213187ca0c703d6e2c7a77fcd.min.js></script><div class=singlePage><header><h1 id=page-title><a class=root-title href=https://abhishek0010.github.io/quartz/>🪴 Quartz 3.3</a></h1><div class=spacer></div><div id=search-icon><p>Search</p><svg tabindex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search Icon</title><desc id="desc">Icon to open search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"/><circle cx="8" cy="8" r="7"/></g></svg></div><div class=darkmode><input class=toggle id=darkmode-toggle type=checkbox tabindex=-1>
+<label id=toggle-label-light for=darkmode-toggle tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="dayIcon" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35"><title>Light Mode</title><path d="M6 17.5C6 16.672 5.328 16 4.5 16h-3C.672 16 0 16.672.0 17.5S.672 19 1.5 19h3C5.328 19 6 18.328 6 17.5zM7.5 26c-.414.0-.789.168-1.061.439l-2 2C4.168 28.711 4 29.086 4 29.5 4 30.328 4.671 31 5.5 31c.414.0.789-.168 1.06-.44l2-2C8.832 28.289 9 27.914 9 27.5 9 26.672 8.329 26 7.5 26zm10-20C18.329 6 19 5.328 19 4.5v-3C19 .672 18.329.0 17.5.0S16 .672 16 1.5v3C16 5.328 16.671 6 17.5 6zm10 3c.414.0.789-.168 1.06-.439l2-2C30.832 6.289 31 5.914 31 5.5 31 4.672 30.329 4 29.5 4c-.414.0-.789.168-1.061.44l-2 2C26.168 6.711 26 7.086 26 7.5 26 8.328 26.671 9 27.5 9zM6.439 8.561C6.711 8.832 7.086 9 7.5 9 8.328 9 9 8.328 9 7.5c0-.414-.168-.789-.439-1.061l-2-2C6.289 4.168 5.914 4 5.5 4 4.672 4 4 4.672 4 5.5c0 .414.168.789.439 1.06l2 2.001zM33.5 16h-3c-.828.0-1.5.672-1.5 1.5s.672 1.5 1.5 1.5h3c.828.0 1.5-.672 1.5-1.5S34.328 16 33.5 16zM28.561 26.439C28.289 26.168 27.914 26 27.5 26c-.828.0-1.5.672-1.5 1.5.0.414.168.789.439 1.06l2 2C28.711 30.832 29.086 31 29.5 31c.828.0 1.5-.672 1.5-1.5.0-.414-.168-.789-.439-1.061l-2-2zM17.5 29c-.829.0-1.5.672-1.5 1.5v3c0 .828.671 1.5 1.5 1.5s1.5-.672 1.5-1.5v-3C19 29.672 18.329 29 17.5 29zm0-22C11.71 7 7 11.71 7 17.5S11.71 28 17.5 28 28 23.29 28 17.5 23.29 7 17.5 7zm0 18c-4.136.0-7.5-3.364-7.5-7.5s3.364-7.5 7.5-7.5 7.5 3.364 7.5 7.5S21.636 25 17.5 25z"/></svg></label><label id=toggle-label-dark for=darkmode-toggle tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="nightIcon" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'"><title>Dark Mode</title><path d="M96.76 66.458c-.853-.852-2.15-1.064-3.23-.534-6.063 2.991-12.858 4.571-19.655 4.571C62.022 70.495 50.88 65.88 42.5 57.5 29.043 44.043 25.658 23.536 34.076 6.47c.532-1.08.318-2.379-.534-3.23-.851-.852-2.15-1.064-3.23-.534-4.918 2.427-9.375 5.619-13.246 9.491-9.447 9.447-14.65 22.008-14.65 35.369.0 13.36 5.203 25.921 14.65 35.368s22.008 14.65 35.368 14.65c13.361.0 25.921-5.203 35.369-14.65 3.872-3.871 7.064-8.328 9.491-13.246C97.826 68.608 97.611 67.309 96.76 66.458z"/></svg></label></div></header><article><h1>Javascript</h1><p class=meta>Last updated
+Jul 13, 2023
+<a href=https://github.com/jackyzha0/quartz/tree/hugo/content/Javascript.md rel=noopener>Edit Source</a></p><ul class=tags><li><a href=https://abhishek0010.github.io/quartz/tags/languages/>Languages</a></li><li><a href=https://abhishek0010.github.io/quartz/tags/javascript/>Javascript</a></li></ul><aside class=mainTOC><details><summary>Table of Contents</summary><nav id=TableOfContents><ol><li><a href=#to-prepare>To Prepare</a></li><li><a href=#to-learn>TO LEARN</a></li><li><a href=#summarize>Summarize</a></li><li><a href=#syntax>Syntax</a></li><li><a href=#variable-declaration--types>Variable Declaration & Types</a><ol><li><a href=#var-vs-let-const>var vs let, const</a></li><li><a href=#primitive-types>Primitive Types</a></li><li><a href=#wrapper-for-primitivesrefer-data-types-in-js>Wrapper for primitives(Refer [[Data Types in JS]])</a></li></ol></li><li><a href=#types-of-quotes>Types of quotes</a></li><li><a href=#type-conversions>Type Conversions</a></li><li><a href=#comparison-and-difference-between--and--in-javascript>Comparison and Difference Between == and === in Javascript</a></li><li><a href=#----><code>&&</code> , <code>||</code> & <code>??</code></a></li><li><a href=#objects>Objects</a><ol><li><a href=#introduction>Introduction</a></li><li><a href=#object-copying-and-referencing>Object Copying and Referencing</a></li><li><a href=#object-cloning-and-merging-objectassign>Object cloning and merging, <code>Object.assign</code></a></li><li><a href=#multi-word-keys-notation>Multi word keys(<code>[]</code> notation)</a></li><li><a href=#objectkeys-values-entrieshttpsjavascriptinfokeys-values-entriesobject-keys-values-entries><a href=https://javascript.info/keys-values-entries#object-keys-values-entries>Object.keys, values, entries</a></a></li><li><a href=#transforming-objects>Transforming objects</a></li><li><a href=#property-flags-and-descriptorshttpsjavascriptinfoproperty-descriptors><a href=https://javascript.info/property-descriptors>Property flags and descriptors</a></a></li><li><a href=#property-getters-and-settershttpsjavascriptinfoproperty-accessors><a href=https://javascript.info/property-accessors>Property getters and setters</a></a></li></ol></li><li><a href=#destructuring-assignmenthttpsjavascriptinfodestructuring-assignment><a href=https://javascript.info/destructuring-assignment>Destructuring assignment</a></a></li><li><a href=#this>this</a><ol><li><a href=#context-in-function>Context in function</a></li><li><a href=#context-in-callbacks>Context in callbacks</a></li><li><a href=#context-in-arrow-functions>Context in arrow functions</a></li><li><a href=#context-in-constructors>Context in constructors</a></li><li><a href=#context-in-class>Context in Class</a></li><li><a href=#context-in-global>Context in global</a></li></ol></li><li><a href=#arrays-see-data-types-in-jsbec712>Arrays (See [[Data Types in JS#^bec712]])</a></li><li><a href=#functions>Functions</a></li><li><a href=#functional-expressions>Functional Expressions</a></li><li><a href=#callback-functions>Callback Functions</a></li><li><a href=#arrow-functions>Arrow Functions</a><ol><li></li></ol></li><li><a href=#function-prototype-methods>Function Prototype Methods</a><ol><li><a href=#functionprototypeapplythisarg-arr>Function.prototype.apply(thisArg, arr)</a></li><li><a href=#functionprototypebindthisarg-optional>Function.prototype.bind(thisArg, optional&mldr;)</a></li></ol></li><li><a href=#closures>Closures</a></li><li><a href=#emulating-private-methods-with-closures>Emulating private methods with Closures</a></li><li><a href=#creating-closures-in-a-loop>Creating closures in a loop</a></li><li><a href=#using-arguments-object>Using <em>arguments</em> object</a></li><li><a href=#function-parameters>Function Parameters</a></li><li><a href=#iife>IIFE</a></li><li><a href=#template-literals>Template literals</a></li><li><a href=#strict-mode><code>strict</code> mode</a></li><li><a href=#asynchronous-javascript>Asynchronous Javascript</a><ol><li><a href=#web-workers>Web Workers</a></li></ol></li><li><a href=#personal-notes>Personal Notes</a></li><li><a href=#transpilers-and-polyfills>Transpilers and polyfills</a><ol><li><a href=#transpilers>Transpilers</a></li><li><a href=#polyfills>Polyfills</a></li></ol></li><li><a href=#references>References:</a></li></ol></nav></details></aside><div><a href=#javascripts-notes><h1 id=javascripts-notes><span class=hanchor arialabel=Anchor># </span>Javascripts notes</h1></a></div><hr><p>Date Modified : <code>16-12-2022</code></p><p>Tags: #javascript #languages #publish</p><hr><a href=#javascript><h1 id=javascript><span class=hanchor arialabel=Anchor># </span>`Javascript.</h1></a><a href=#to-prepare><h2 id=to-prepare><span class=hanchor arialabel=Anchor># </span>To Prepare</h2></a><p>Frameworks Explainers:</p><ul><li><a class="internal-link broken">ReactJS</a></li><li><a class="internal-link broken">NextJS</a></li></ul><p>Package Managers:</p><ul><li><a class="internal-link broken">npm</a></li><li><a class="internal-link broken">yarn</a></li></ul><p>Bundler:</p><ul><li><a class="internal-link broken">webpack</a></li><li><a class="internal-link broken">ViteJS</a></li></ul><p>Packages notes:</p><ul><li><a class="internal-link broken">ESLint</a></li><li><a class="internal-link broken">NX</a></li></ul><p>CSS</p><ul><li><a class="internal-link broken">PostCSS</a></li></ul><p>Testing
+<a href=https://javascript.info/testing-mocha rel=noopener>Automated testing with Mocha</a></p><ul><li>Mocha</li><li>Chai</li><li>Sinon</li></ul><a href=#to-learn><h2 id=to-learn><span class=hanchor arialabel=Anchor># </span>TO LEARN</h2></a><ul><li>Decorators
+<a href=https://javascript.info/call-apply-decorators rel=noopener>Decorators and forwarding, call/apply</a></li><li>factories</li><li>template literals
+<a href=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_templates rel=noopener>Template literals (Template strings) - JavaScript | MDN</a></li><li><a href=https://javascript.info/garbage-collection rel=noopener>Garbage collection</a></li></ul><a href=#summarize><h2 id=summarize><span class=hanchor arialabel=Anchor># </span>Summarize</h2></a><ul><li><a href=https://javascript.info/constructor-new rel=noopener>Constructor, operator &ldquo;new&rdquo;</a> Using Typescript instead</li><li><a href=https://javascript.info/symbol rel=noopener>Symbol type</a> Another type to create unique string, not accessable by object property iterator</li><li></li></ul><p>Good resources that show the current state of support for various features:</p><ul><li><a href=https://kangax.github.io/compat-table/es6/ rel=noopener>https://kangax.github.io/compat-table/es6/</a> – for pure JavaScript.</li><li><a href=https://caniuse.com/ rel=noopener>https://caniuse.com/</a> – for browser-related functions.</li></ul><a href=#syntax><h2 id=syntax><span class=hanchor arialabel=Anchor># </span>Syntax</h2></a><p>Syntax can be found in <a class="internal-link broken">Syntax-JS</a></p><a href=#variable-declaration--types><h2 id=variable-declaration--types><span class=hanchor arialabel=Anchor># </span>Variable Declaration & Types</h2></a><ul><li><code>var</code> has global scope outside and within blocks</li><li>Use <code>let</code> & <code>const</code> which create
+<a href=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz rel=noopener>temporal dead zones</a> , which throws <code>ReferenceError</code>, when used outside scope. Different from <code>var</code> which throws <code>undefined</code> as value.</li></ul><a href=#var-vs-let-const><h3 id=var-vs-let-const><span class=hanchor arialabel=Anchor># </span>var vs let, const</h3></a><ul><li><strong><code>var</code> has no block scope(like if , for blocks etc)</strong>, it has <code>function and global scope</code> but it ignore block scope, unlinke <code>let</code> & <code>const</code> (For this reasom IIEF were used to block scope of <code>var</code>)</li><li><strong><code>var</code> tolerates redeclerations</strong>, unlike <code>let</code> & <code>const</code> which throws redecleration errors</li><li><strong><code>var</code> variables can be used before initializations</strong> (also called <code>hoisting</code>) which is dangerous if declared in block scope. NOTE - d<code>eclerations are hoisted but initializations are not.</code></li><li>Convention to use <code>camelCase</code> for let and <code>UPPER_CASE</code> for const.</li></ul><a href=#primitive-types><h3 id=primitive-types><span class=hanchor arialabel=Anchor># </span>Primitive Types</h3></a><p>There are 8 data types:</p><ul><li><code>number</code> for both floating-point and integer numbers,</li><li><code>bigint</code> for integer numbers of arbitrary length,</li><li><code>string</code> for strings,</li><li><code>boolean</code> for logical values: <code>true/false</code>,</li><li><code>null</code> – a type with a single value <code>null</code>, meaning “empty” or “does not exist”,</li><li><code>undefined</code> – a type with a single value <code>undefined</code>, meaning “not assigned”,</li><li><code>object</code> and <code>symbol</code> – for complex data structures and unique identifiers, we haven’t learnt them yet.</li></ul><p>The <code>typeof</code> operator returns the type for a value, with two exceptions:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=k>typeof</span> <span class=kc>null</span> <span class=o>==</span> <span class=s2>&#34;object&#34;</span> <span class=c1>// error in the language
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=k>typeof</span> <span class=kd>function</span><span class=p>(){}</span> <span class=o>==</span> <span class=s2>&#34;function&#34;</span> <span class=c1>// functions are treated specially
+</span></span></span></code></pre></td></tr></table></div></div><a href=#wrapper-for-primitivesrefer-data-types-in-js><h3 id=wrapper-for-primitivesrefer-data-types-in-js><span class=hanchor arialabel=Anchor># </span>Wrapper for primitives(Refer <a class="internal-link broken">Data Types in JS</a>)</h3></a><ul><li>Except <code>undefined</code> & <code>null</code>, all other primitive types have wrapper methods.</li><li>Formally, these methods work via temporary objects, but JavaScript engines are well tuned to optimize that internally, so they are not expensive to call.</li></ul><a href=#types-of-quotes><h2 id=types-of-quotes><span class=hanchor arialabel=Anchor># </span>Types of quotes</h2></a><ul><li><code>' '</code> & <code>" "</code> are normal quotes, where <code>``</code> used for functional expressions.</li><li>Mainly used for strings, refer <a class="internal-link broken">Data Types in JS</a></li></ul><a href=#type-conversions><h2 id=type-conversions><span class=hanchor arialabel=Anchor># </span>Type Conversions</h2></a><p>The three most widely used type conversions are to string, to number, and to boolean.</p><p><strong><code>String Conversion</code></strong> – Occurs when we output something. Can be performed with <code>String(value)</code>. The conversion to string is usually obvious for primitive values.</p><p><strong><code>Numeric Conversion</code></strong> – Occurs in math operations. Can be performed with <code>Number(value)</code>.</p><p>The conversion follows the rules:</p><ul><li><code>undefined</code> = <code>NaN</code></li><li><code>null</code> = <code>0</code></li><li><code>true / false</code> = <code>1 / 0</code></li><li><code>string</code> = The string is read “as is”, whitespaces (includes spaces, tabs <code>\t</code>, newlines <code>\n</code> etc.) from both sides are ignored. An empty string becomes <code>0</code>. An error gives <code>NaN</code>.</li></ul><p><strong><code>Boolean Conversion</code></strong> – Occurs in logical operations. Can be performed with <code>Boolean(value)</code>.</p><p>Follows the rules:</p><ul><li><code>0</code>, <code>null</code>, <code>undefined</code>, <code>NaN</code>, <code>""</code> = <code>false</code></li><li>any other value = <code>true</code></li></ul><p>Most of these rules are easy to understand and memorize. The notable exceptions where people usually make mistakes are:</p><ul><li><code>undefined</code> is <code>NaN</code> as a number, not <code>0</code>.</li><li><code>"0"</code> and space-only strings like <code>" "</code> are true as a boolean.</li></ul><a href=#comparison-and-difference-between--and--in-javascript><h2 id=comparison-and-difference-between--and--in-javascript><span class=hanchor arialabel=Anchor># </span>Comparison and Difference Between <mark>and </mark>= in Javascript</h2></a><table><thead><tr><th>S.no</th><th>==</th><th>===</th></tr></thead><tbody><tr><td>1</td><td>Compares two operands</td><td>Compares two operands</td></tr><tr><td>2</td><td>returns <em>true</em> if operands have the same data type and same value, returns <em>false</em> if the values differ.</td><td>returns <em>true</em> only if operands are of same data type and same value, otherwise returns <em>false</em></td></tr><tr><td>3</td><td>In case both operands are of different data types, it performs type conversion of one operand in order to make the data types of the operands the same.</td><td>In case both operands are of different data type, it doesn&rsquo;t perform type conversion of the operands.</td></tr><tr><td>4</td><td>Also known as <em>loose equality</em></td><td>Also known as <em>strict equality</em></td></tr><tr><td>5</td><td>Follows abstract equality comparison algorithm</td><td>Follows strict equality comparison algorithm</td></tr></tbody></table><a href=#----><h2 id=----><span class=hanchor arialabel=Anchor># </span><code>&&</code> , <code>||</code> & <code>??</code></h2></a><ul><li>Returns first falsy value</li><li>returns first truthy value</li><li>refurns first defined value</li></ul><a href=#objects><h2 id=objects><span class=hanchor arialabel=Anchor># </span>Objects</h2></a><a href=#introduction><h3 id=introduction><span class=hanchor arialabel=Anchor># </span>Introduction</h3></a><ul><li>Objects are <code>collection of properties.</code>(Like a key value pair)</li><li>An object can be created with figure brackets <code>{…}</code> with an optional list of <em>properties</em>. A property is a “key: value” pair, where <code>key</code> is a string (also called a “property name”), and <code>value</code> can be anything.</li><li>An <code>empty object</code> can be created using one of two syntaxes:</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=kd>let</span> <span class=nx>user</span> <span class=o>=</span> <span class=k>new</span> <span class=nb>Object</span><span class=p>();</span> <span class=c1>// &#34;object constructor&#34; syntax
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kd>let</span> <span class=nx>user</span> <span class=o>=</span> <span class=p>{};</span>  <span class=c1>// &#34;object literal&#34; syntax
+</span></span></span></code></pre></td></tr></table></div></div><ul><li>Its <code>property can also contain another object</code></li><li>Properties can be accessed using <code>.</code> notation</li><li>To remove a property, we can use the <code>delete</code> operator:</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=k>delete</span> <span class=nx>user</span><span class=p>.</span><span class=nx>age</span><span class=p>;</span>
+</span></span></code></pre></td></tr></table></div></div><ul><li>The last property in the list may end with a <code>comma:</code></li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=kd>let</span> <span class=nx>user</span> <span class=o>=</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>name</span><span class=o>:</span> <span class=s2>&#34;John&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nx>age</span><span class=o>:</span> <span class=mi>30</span><span class=p>,</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>That is called a “trailing” or “hanging” comma. Makes it easier to add/remove/move around properties, because all lines become alike.</p><ul><li>We can use both normal properties and <code>shorthands</code> in the same object:</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=kd>let</span> <span class=nx>user</span> <span class=o>=</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>name</span><span class=p>,</span>  <span class=c1>// same as name:name
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=nx>age</span><span class=o>:</span> <span class=mi>30</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
+</span></span></code></pre></td></tr></table></div></div><ul><li><p>All objects have <a class="internal-link broken">Javascript Prototypes</a></p></li><li><p>Nonexistent properties of an object have value 
+<a href=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined rel=noopener><code>undefined</code></a> (and not 
+<a href=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null rel=noopener><code>null</code></a>).</p></li><li><p><code>in</code> & <code>for..in</code> keywords are used for accessing object properties. Refer <a class="internal-link broken">Syntax-JS</a></p></li><li><p>Methods can also be added as properties of an object</p></li><li><p>Prototypes can act as an inheritence feature</p></li><li><p>GEters and setters can also be added within a method</p></li></ul><a href=#object-copying-and-referencing><h3 id=object-copying-and-referencing><span class=hanchor arialabel=Anchor># </span>Object Copying and Referencing</h3></a><ul><li><strong>A variable assigned to an object stores not the object itself, but its “address in memory” – in other words “a reference” to it.</strong></li><li><strong>When an object variable is copied, the reference is copied, but the object itself is not duplicated.</strong></li></ul><a href=#object-cloning-and-merging-objectassign><h3 id=object-cloning-and-merging-objectassign><span class=hanchor arialabel=Anchor># </span>Object cloning and merging, <code>Object.assign</code></h3></a><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=kd>let</span> <span class=nx>user</span> <span class=o>=</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>name</span><span class=o>:</span> <span class=s2>&#34;John&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nx>age</span><span class=o>:</span> <span class=mi>30</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>let</span> <span class=nx>clone</span> <span class=o>=</span> <span class=p>{};</span> <span class=c1>// the new empty object
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=c1>// let&#39;s copy all user properties into it
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=k>for</span> <span class=p>(</span><span class=kd>let</span> <span class=nx>key</span> <span class=k>in</span> <span class=nx>user</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>clone</span><span class=p>[</span><span class=nx>key</span><span class=p>]</span> <span class=o>=</span> <span class=nx>user</span><span class=p>[</span><span class=nx>key</span><span class=p>];</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// now clone is a fully independent object with the same content
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=nx>clone</span><span class=p>.</span><span class=nx>name</span> <span class=o>=</span> <span class=s2>&#34;Pete&#34;</span><span class=p>;</span> <span class=c1>// changed the data in it
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=nx>alert</span><span class=p>(</span> <span class=nx>user</span><span class=p>.</span><span class=nx>name</span> <span class=p>);</span> <span class=c1>// still John in the original object
+</span></span></span></code></pre></td></tr></table></div></div><p>We also can use <code>Object.assign</code> to perform a simple object cloning:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=kd>let</span> <span class=nx>user</span> <span class=o>=</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>name</span><span class=o>:</span> <span class=s2>&#34;John&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nx>age</span><span class=o>:</span> <span class=mi>30</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>let</span> <span class=nx>clone</span> <span class=o>=</span> <span class=nb>Object</span><span class=p>.</span><span class=nx>assign</span><span class=p>({},</span> <span class=nx>user</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>alert</span><span class=p>(</span><span class=nx>clone</span><span class=p>.</span><span class=nx>name</span><span class=p>);</span> <span class=c1>// John
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=nx>alert</span><span class=p>(</span><span class=nx>clone</span><span class=p>.</span><span class=nx>age</span><span class=p>);</span> <span class=c1>// 30
+</span></span></span></code></pre></td></tr></table></div></div><p>There are also other methods of cloning an object, e.g. using the 
+<a href=https://javascript.info/rest-parameters-spread rel=noopener>spread syntax</a> <code>clone = {...user}</code>, covered later in the tutorial.</p><a href=#multi-word-keys-notation><h3 id=multi-word-keys-notation><span class=hanchor arialabel=Anchor># </span>Multi word keys(<code>[]</code> notation)</h3></a><a href=#introduction-1><h4 id=introduction-1><span class=hanchor arialabel=Anchor># </span>Introduction</h4></a><ul><li>We can <code>also use multiword property names, but then they must be quoted</code></li><li><code>Square brackets</code> also provide a way to obtain the property name as the result of any expression – as opposed to a literal string – like from a variable as follows:</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=kd>let</span> <span class=nx>key</span> <span class=o>=</span> <span class=s2>&#34;likes birds&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// same as user[&#34;likes birds&#34;] = true;
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=nx>user</span><span class=p>[</span><span class=nx>key</span><span class=p>]</span> <span class=o>=</span> <span class=kc>true</span><span class=p>;</span>
+</span></span></code></pre></td></tr></table></div></div><p>Here, the variable <code>key</code> may be calculated at run-time or depend on the user input. And then we use it to access the property. That gives us a great deal of flexibility.</p><p>For instance:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=kd>let</span> <span class=nx>user</span> <span class=o>=</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>name</span><span class=o>:</span> <span class=s2>&#34;John&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nx>age</span><span class=o>:</span> <span class=mi>30</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>let</span> <span class=nx>key</span> <span class=o>=</span> <span class=nx>prompt</span><span class=p>(</span><span class=s2>&#34;What do you want to know about the user?&#34;</span><span class=p>,</span> <span class=s2>&#34;name&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// access by variable
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=nx>alert</span><span class=p>(</span> <span class=nx>user</span><span class=p>[</span><span class=nx>key</span><span class=p>]</span> <span class=p>);</span> <span class=c1>// John (if enter &#34;name&#34;)
+</span></span></span></code></pre></td></tr></table></div></div><p>The dot notation cannot be used in a similar way:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=kd>let</span> <span class=nx>user</span> <span class=o>=</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>name</span><span class=o>:</span> <span class=s2>&#34;John&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nx>age</span><span class=o>:</span> <span class=mi>30</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>let</span> <span class=nx>key</span> <span class=o>=</span> <span class=s2>&#34;name&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=nx>alert</span><span class=p>(</span> <span class=nx>user</span><span class=p>.</span><span class=nx>key</span> <span class=p>)</span> <span class=c1>// undefined
+</span></span></span></code></pre></td></tr></table></div></div><a href=#computed-properties><h4 id=computed-properties><span class=hanchor arialabel=Anchor># </span>Computed Properties</h4></a><p>We can use square brackets in an object literal, when creating an object. That’s called <em>computed properties</em>.</p><p>For instance:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=kd>let</span> <span class=nx>fruit</span> <span class=o>=</span> <span class=nx>prompt</span><span class=p>(</span><span class=s2>&#34;Which fruit to buy?&#34;</span><span class=p>,</span> <span class=s2>&#34;apple&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>let</span> <span class=nx>bag</span> <span class=o>=</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=p>[</span><span class=nx>fruit</span><span class=p>]</span><span class=o>:</span> <span class=mi>5</span><span class=p>,</span> <span class=c1>// the name of the property is taken from the variable fruit
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=p>};</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>alert</span><span class=p>(</span> <span class=nx>bag</span><span class=p>.</span><span class=nx>apple</span> <span class=p>);</span> <span class=c1>// 5 if fruit=&#34;apple&#34;
+</span></span></span></code></pre></td></tr></table></div></div><p>We can use more complex expressions inside square brackets:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=kd>let</span> <span class=nx>fruit</span> <span class=o>=</span> <span class=s1>&#39;apple&#39;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=kd>let</span> <span class=nx>bag</span> <span class=o>=</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=p>[</span><span class=nx>fruit</span> <span class=o>+</span> <span class=s1>&#39;Computers&#39;</span><span class=p>]</span><span class=o>:</span> <span class=mi>5</span> <span class=c1>// bag.appleComputers = 5
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=p>};</span>
+</span></span></code></pre></td></tr></table></div></div><p>Square brackets are much more powerful than dot notation. They allow any property names and variables. But they are also more cumbersome to write.</p><p>So most of the time, when property names are known and simple, the dot is used. And if we need something more complex, then we switch to square brackets.</p><a href=#beware><h4 id=beware><span class=hanchor arialabel=Anchor># </span>BEWARE:</h4></a><ul><li>Beware of using <code>square brackets </code>to access properties whose names are given by external input. This may make your code susceptible to 
+<a href=https://github.com/nodesecurity/eslint-plugin-security/blob/main/docs/the-dangers-of-square-bracket-notation.md rel=noopener>object injection attacks</a>**</li></ul><h3 id=objectkeys-values-entrieshttpsjavascriptinfokeys-values-entriesobject-keys-values-entries><a href=https://javascript.info/keys-values-entries#object-keys-values-entries rel=noopener>Object.keys, values, entries</a></h3><p>For plain objects, the following methods are available:</p><ul><li><a href=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys rel=noopener>Object.keys(obj)</a> – returns an array of keys.</li><li><a href=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values rel=noopener>Object.values(obj)</a> – returns an array of values.</li><li><a href=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries rel=noopener>Object.entries(obj)</a> – returns an array of <code>[key, value]</code> pairs.</li></ul><p>Please note the distinctions (compared to map for example):</p><p>Map</p><p>Object</p><p>Call syntax</p><p><code>map.keys()</code></p><p><code>Object.keys(obj)</code>, but not <code>obj.keys()</code></p><p>Returns</p><p>iterable</p><p>“real” Array</p><p>The first difference is that we have to call <code>Object.keys(obj)</code>, and not <code>obj.keys()</code>.</p><p>Why so? The main reason is flexibility. Remember, objects are a base of all complex structures in JavaScript. So we may have an object of our own like <code>data</code> that implements its own <code>data.values()</code> method. And we still can call <code>Object.values(data)</code> on it.</p><p>The second difference is that <code>Object.*</code> methods return “real” array objects, not just an iterable. That’s mainly for historical reasons.</p><p>For instance:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=kd>let</span> <span class=nx>user</span> <span class=o>=</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>name</span><span class=o>:</span> <span class=s2>&#34;John&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nx>age</span><span class=o>:</span> <span class=mi>30</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
+</span></span></code></pre></td></tr></table></div></div><ul><li><code>Object.keys(user) = ["name", "age"]</code></li><li><code>Object.values(user) = ["John", 30]</code></li><li><code>Object.entries(user) = [ ["name","John"], ["age",30] ]</code></li></ul><p>Here’s an example of using <code>Object.values</code> to loop over property values:</p><p><a href=https://javascript.info/keys-values-entries# rel=noopener></a></p><p><a href=https://javascript.info/keys-values-entries# rel=noopener></a></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=kd>let</span> <span class=nx>user</span> <span class=o>=</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>name</span><span class=o>:</span> <span class=s2>&#34;John&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nx>age</span><span class=o>:</span> <span class=mi>30</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// loop over values
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=k>for</span> <span class=p>(</span><span class=kd>let</span> <span class=nx>value</span> <span class=k>of</span> <span class=nb>Object</span><span class=p>.</span><span class=nx>values</span><span class=p>(</span><span class=nx>user</span><span class=p>))</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>alert</span><span class=p>(</span><span class=nx>value</span><span class=p>);</span> <span class=c1>// John, then 30
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>Object.keys/values/entries ignore symbolic properties</p><p>Just like a <code>for..in</code> loop, these methods ignore properties that use <code>Symbol(...)</code> as keys.</p><p>Usually that’s convenient. But if we want symbolic keys too, then there’s a separate method 
+<a href=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols rel=noopener>Object.getOwnPropertySymbols</a> that returns an array of only symbolic keys. Also, there exist a method 
+<a href=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys rel=noopener>Reflect.ownKeys(obj)</a> that returns <em>all</em> keys.</p><a href=#transforming-objects><h3 id=transforming-objects><span class=hanchor arialabel=Anchor># </span>Transforming objects</h3></a><p>Objects lack many methods that exist for arrays, e.g. <code>map</code>, <code>filter</code> and others.</p><p>If we’d like to apply them, then we can use <code>Object.entries</code> followed by <code>Object.fromEntries</code>:</p><ol><li>Use <code>Object.entries(obj)</code> to get an array of key/value pairs from <code>obj</code>.</li><li>Use array methods on that array, e.g. <code>map</code>, to transform these key/value pairs.</li><li>Use <code>Object.fromEntries(array)</code> on the resulting array to turn it back into an object.</li></ol><p>For example, we have an object with prices, and would like to double them:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=kd>let</span> <span class=nx>prices</span> <span class=o>=</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>banana</span><span class=o>:</span> <span class=mi>1</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nx>orange</span><span class=o>:</span> <span class=mi>2</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nx>meat</span><span class=o>:</span> <span class=mi>4</span><span class=p>,</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>let</span> <span class=nx>doublePrices</span> <span class=o>=</span> <span class=nb>Object</span><span class=p>.</span><span class=nx>fromEntries</span><span class=p>(</span>
+</span></span><span class=line><span class=cl>  <span class=c1>// convert prices to array, map each key/value pair into another pair
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=c1>// and then fromEntries gives back the object
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=nb>Object</span><span class=p>.</span><span class=nx>entries</span><span class=p>(</span><span class=nx>prices</span><span class=p>).</span><span class=nx>map</span><span class=p>(</span><span class=nx>entry</span> <span class=p>=&gt;</span> <span class=p>[</span><span class=nx>entry</span><span class=p>[</span><span class=mi>0</span><span class=p>],</span> <span class=nx>entry</span><span class=p>[</span><span class=mi>1</span><span class=p>]</span> <span class=o>*</span> <span class=mi>2</span><span class=p>])</span>
+</span></span><span class=line><span class=cl><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>alert</span><span class=p>(</span><span class=nx>doublePrices</span><span class=p>.</span><span class=nx>meat</span><span class=p>);</span> <span class=c1>// 8
+</span></span></span></code></pre></td></tr></table></div></div><p>It may look difficult at first sight, but becomes easy to understand after you use it once or twice. We can make powerful chains of transforms this way.</p><h3 id=property-flags-and-descriptorshttpsjavascriptinfoproperty-descriptors><a href=https://javascript.info/property-descriptors rel=noopener>Property flags and descriptors</a></h3><h3 id=property-getters-and-settershttpsjavascriptinfoproperty-accessors><a href=https://javascript.info/property-accessors rel=noopener>Property getters and setters</a></h3><h2 id=destructuring-assignmenthttpsjavascriptinfodestructuring-assignment><a href=https://javascript.info/destructuring-assignment rel=noopener>Destructuring assignment</a></h2><a href=#this><h2 id=this><span class=hanchor arialabel=Anchor># </span>this</h2></a><a href=#context-in-function><h3 id=context-in-function><span class=hanchor arialabel=Anchor># </span>Context in function</h3></a><ul><li>For a typical function, the value of <code>this</code> is the object that the function is accessed on. In other words, if the function call is in the form <code>obj.f()</code>, then <code>this</code> refers to <code>obj</code>. For example:</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=kd>function</span> <span class=nx>getThis</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=k>this</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>obj1</span> <span class=o>=</span> <span class=p>{</span> <span class=nx>name</span><span class=o>:</span> <span class=s2>&#34;obj1&#34;</span> <span class=p>};</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>obj2</span> <span class=o>=</span> <span class=p>{</span> <span class=nx>name</span><span class=o>:</span> <span class=s2>&#34;obj2&#34;</span> <span class=p>};</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>obj1</span><span class=p>.</span><span class=nx>getThis</span> <span class=o>=</span> <span class=nx>getThis</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=nx>obj2</span><span class=p>.</span><span class=nx>getThis</span> <span class=o>=</span> <span class=nx>getThis</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>obj1</span><span class=p>.</span><span class=nx>getThis</span><span class=p>());</span> <span class=c1>// { name: &#39;obj1&#39;, getThis: [Function: getThis] }
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>obj2</span><span class=p>.</span><span class=nx>getThis</span><span class=p>());</span> <span class=c1>// { name: &#39;obj2&#39;, getThis: [Function: getThis] }
+</span></span></span></code></pre></td></tr></table></div></div><ul><li>If the value that the method is accessed on is a primitive, <code>this</code> will be a primitive value as well — but only if the function is in strict mode.</li><li>If a function is called with <code>this</code> set to <code>undefined</code> or <code>null</code>, <code>this</code> gets substituted with 
+<a href=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis rel=noopener><code>globalThis</code></a> without <code>strict</code> mode and throws error with <code>strict</code>.</li><li>If the function is called with <code>this</code> set to a primitive value, <code>this</code> gets substituted with the primitive value&rsquo;s wrapper object.</li></ul><a href=#context-in-callbacks><h3 id=context-in-callbacks><span class=hanchor arialabel=Anchor># </span>Context in callbacks</h3></a><ul><li>Callbacks are <em>typically</em> called with a <code>this</code> value of <code>undefined</code> (calling it directly without attaching it to any object), which means if the function is non–strict, the value of <code>this</code> is the global object (
+<a href=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis rel=noopener><code>globalThis</code></a>). This is the case for 
+<a href=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods rel=noopener>iterative array methods</a>, the 
+<a href=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise rel=noopener><code>Promise()</code></a> constructor, 
+<a href=https://developer.mozilla.org/en-US/docs/Web/API/setTimeout rel=noopener><code>setTimeout()</code></a>, etc.</li></ul><a href=#context-in-arrow-functions><h3 id=context-in-arrow-functions><span class=hanchor arialabel=Anchor># </span>Context in arrow functions</h3></a><ul><li>when evaluating an arrow function&rsquo;s body, the language does not create a new <code>this</code> binding.</li><li>In global code, <code>this</code> is always <code>globalThis</code> regardless of strictness, because of the 
+<a href=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this#global_context rel=noopener>global context</a> binding</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=kr>const</span> <span class=nx>globalObject</span> <span class=o>=</span> <span class=k>this</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>foo</span> <span class=o>=</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=k>this</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>foo</span><span class=p>()</span> <span class=o>===</span> <span class=nx>globalObject</span><span class=p>);</span> <span class=c1>// true
+</span></span></span></code></pre></td></tr></table></div></div><a href=#context-in-constructors><h3 id=context-in-constructors><span class=hanchor arialabel=Anchor># </span>Context in constructors</h3></a><ul><li>When a function is used as a constructor (with the 
+<a href=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new rel=noopener><code>new</code></a> keyword), its <code>this</code> is bound to the new object being constructed, no matter which object the constructor function is accessed on. The value of <code>this</code> becomes the value of the <code>new</code> expression unless the constructor returns another non–primitive value.</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=kd>function</span> <span class=nx>C</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>this</span><span class=p>.</span><span class=nx>a</span> <span class=o>=</span> <span class=mi>37</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>let</span> <span class=nx>o</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>C</span><span class=p>();</span>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>o</span><span class=p>.</span><span class=nx>a</span><span class=p>);</span> <span class=c1>// 37
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=kd>function</span> <span class=nx>C2</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>this</span><span class=p>.</span><span class=nx>a</span> <span class=o>=</span> <span class=mi>37</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=p>{</span> <span class=nx>a</span><span class=o>:</span> <span class=mi>38</span> <span class=p>};</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>o</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>C2</span><span class=p>();</span>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>o</span><span class=p>.</span><span class=nx>a</span><span class=p>);</span> <span class=c1>// 38
+</span></span></span></code></pre></td></tr></table></div></div><a href=#context-in-class><h3 id=context-in-class><span class=hanchor arialabel=Anchor># </span>Context in Class</h3></a><ul><li><em>Instance context</em> - constructors, methods, instance field initializers; the <code>this</code> value is the object that the method was accessed on. If the method is not transferred to another object, <code>this</code> is generally an instance of the class.</li><li><em>static context</em> - static methods, field initializers, static initialization blocks; <code>this</code> is the value of the class</li><li><em>derived class constructor</em> -  derived constructors have no initial <code>this</code> binding. Calling 
+<a href=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/super rel=noopener><code>super()</code></a>creates a <code>this</code> binding within the constructor and essentially has the effect of evaluating the following line of code, where <code>Base</code> is the base class</li></ul><a href=#context-in-global><h3 id=context-in-global><span class=hanchor arialabel=Anchor># </span>Context in global</h3></a><ul><li>At the top level of a script, <code>this</code> refers to 
+<a href=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis rel=noopener><code>globalThis</code></a> whether in strict mode or not. This is generally the same as the global object — for example, if the source is put inside an HTML 
+<a href=https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script rel=noopener><code>&lt;script></code></a> element and executed as a script, <code>this === window</code>.</li></ul><a href=#arrays-see-data-types-in-jsbec712><h2 id=arrays-see-data-types-in-jsbec712><span class=hanchor arialabel=Anchor># </span>Arrays (See <a class="internal-link broken">Data Types in JS</a>)</h2></a><ul><li>Objects with <code>0 indexed keys</code> and are not associative.</li><li><a href=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#array_indices rel=noopener>Array indices</a> are, in fact, properties with string keys that contain integers.</li><li>Only be accessed using <code>bracket notation.</code></li><li><code>Length</code> can be <code>increased or decreased</code>, <code>empty</code> spaces return <code>undefined.</code></li><li>Has a bunch of inbuilt copying, modifying and iterative methods, refer <a class="internal-link broken">Syntax-JS</a></li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=kr>const</span> <span class=nx>arrayLike</span> <span class=o>=</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=mi>0</span><span class=o>:</span> <span class=s2>&#34;a&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=mi>1</span><span class=o>:</span> <span class=s2>&#34;b&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nx>length</span><span class=o>:</span> <span class=mi>2</span><span class=p>,</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
+</span></span></code></pre></td></tr></table></div></div><ul><li>Above is the generic array like object</li></ul><a href=#functions><h2 id=functions><span class=hanchor arialabel=Anchor># </span>Functions</h2></a><p>A function declaration looks like this:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=kd>function</span> <span class=nx>name</span><span class=p>(</span><span class=nx>parameters</span><span class=p>,</span> <span class=nx>delimited</span><span class=p>,</span> <span class=nx>by</span><span class=p>,</span> <span class=nx>comma</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=cm>/* code */</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><ul><li><p><code>Values </code>passed to a function <code>as parameters are copied to its local variables.</code></p></li><li><p>A <code>function may access outer variables</code>. But it works only from inside out. The c<code>ode outside of the function doesn’t see its local variables.</code></p></li><li><p>A function can return a value. If it doesn’t, then its result is <code>undefined</code>.
+<strong>NOTE: To make the code clean and easy to understand, it’s recommended to use mainly local variables and parameters in the function, not outer variables.</strong></p></li><li><p>Functions are values. They can be <code>assigned, copied or declared in any place of the code.</code></p></li><li><p><code>If</code>the function is <code>declared as a separate statement </code>in the main code flow, that’s called a <code>“Function Declaration”.</code></p></li><li><p><code>If</code> the function is <code>created as a part of an expression</code>, it’s called a <code>“Function Expression”.</code><a href=/quartz#2ebdf6 rel=noopener class=internal-link data-src=/quartz></a></p></li><li><p><code>Function Declarations are processed before the code block is executed. They are visible everywhere in the block.</code></p></li><li><p><code>Function Expressions are created when the execution flow reaches them.</code></p></li></ul><a href=#functional-expressions><h2 id=functional-expressions><span class=hanchor arialabel=Anchor># </span>Functional Expressions</h2></a><p>^2ebdf6</p><ul><li>a <code>map</code> function that should receive a function as first argument and an array as second argument:</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=kd>function</span> <span class=nx>map</span><span class=p>(</span><span class=nx>f</span><span class=p>,</span> <span class=nx>a</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=kr>const</span> <span class=nx>result</span> <span class=o>=</span> <span class=k>new</span> <span class=nb>Array</span><span class=p>(</span><span class=nx>a</span><span class=p>.</span><span class=nx>length</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=k>for</span> <span class=p>(</span><span class=kd>let</span> <span class=nx>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>i</span> <span class=o>&lt;</span> <span class=nx>a</span><span class=p>.</span><span class=nx>length</span><span class=p>;</span> <span class=nx>i</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>result</span><span class=p>[</span><span class=nx>i</span><span class=p>]</span> <span class=o>=</span> <span class=nx>f</span><span class=p>(</span><span class=nx>a</span><span class=p>[</span><span class=nx>i</span><span class=p>]);</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=nx>result</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>f</span> <span class=o>=</span> <span class=kd>function</span> <span class=p>(</span><span class=nx>x</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=nx>x</span> <span class=o>*</span> <span class=nx>x</span> <span class=o>*</span> <span class=nx>x</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>numbers</span> <span class=o>=</span> <span class=p>[</span><span class=mi>0</span><span class=p>,</span> <span class=mi>1</span><span class=p>,</span> <span class=mi>2</span><span class=p>,</span> <span class=mi>5</span><span class=p>,</span> <span class=mi>10</span><span class=p>];</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>cube</span> <span class=o>=</span> <span class=nx>map</span><span class=p>(</span><span class=nx>f</span><span class=p>,</span> <span class=nx>numbers</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>cube</span><span class=p>);</span>
+</span></span></code></pre></td></tr></table></div></div><ul><li>Function Hoisting - The below code works, only works with function <em>declarations</em></li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>square</span><span class=p>(</span><span class=mi>5</span><span class=p>));</span> <span class=c1>// 25
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=kd>function</span> <span class=nx>square</span><span class=p>(</span><span class=nx>n</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=nx>n</span> <span class=o>*</span> <span class=nx>n</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><a href=#callback-functions><h2 id=callback-functions><span class=hanchor arialabel=Anchor># </span>Callback Functions</h2></a><p>Refer <a class="internal-link broken">Asynchronous JS</a></p><a href=#arrow-functions><h2 id=arrow-functions><span class=hanchor arialabel=Anchor># </span>Arrow Functions</h2></a><ul><li>Its a type of functional experssion</li><li>It’s called “arrow functions”, because it looks like this:</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=kd>let</span> <span class=nx>func</span> <span class=o>=</span> <span class=p>(</span><span class=nx>arg1</span><span class=p>,</span> <span class=nx>arg2</span><span class=p>,</span> <span class=p>...,</span> <span class=nx>argN</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=nx>expression</span><span class=p>;</span>
+</span></span></code></pre></td></tr></table></div></div><ul><li>It’s in the very spirit of JavaScript to <code>create a function and pass it somewhere.</code> And in such functions <code>we usually don’t want to leave the current context</code>. That’s where arrow functions come in handy.</li><li><a href=https://javascript.info/arrow-functions#arrow-functions-have-no-this rel=noopener>Arrow functions have no “this”</a> If <code>this</code> is accessed, it is taken from the outside.</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>let</span> <span class=nx>group</span> <span class=o>=</span> <span class=p>{</span> 
+</span></span><span class=line><span class=cl>	<span class=nx>title</span><span class=o>:</span> <span class=s2>&#34;Our Group&#34;</span><span class=p>,</span> 
+</span></span><span class=line><span class=cl>	<span class=nx>students</span><span class=o>:</span> <span class=p>[</span><span class=s2>&#34;John&#34;</span><span class=p>,</span> <span class=s2>&#34;Pete&#34;</span><span class=p>,</span> <span class=s2>&#34;Alice&#34;</span><span class=p>],</span> 
+</span></span><span class=line><span class=cl>	<span class=nx>showList</span><span class=p>()</span> <span class=p>{</span> 
+</span></span><span class=line><span class=cl>		<span class=k>this</span><span class=p>.</span><span class=nx>students</span><span class=p>.</span><span class=nx>forEach</span><span class=p>(</span> 
+</span></span><span class=line><span class=cl>			<span class=nx>student</span> <span class=p>=&gt;</span> <span class=nx>alert</span><span class=p>(</span><span class=k>this</span><span class=p>.</span><span class=nx>title</span> <span class=o>+</span> <span class=s1>&#39;: &#39;</span> <span class=o>+</span> <span class=nx>student</span><span class=p>)</span> 
+</span></span><span class=line><span class=cl>		<span class=p>);</span> 
+</span></span><span class=line><span class=cl>	<span class=p>}</span> 
+</span></span><span class=line><span class=cl><span class=p>};</span> 
+</span></span><span class=line><span class=cl><span class=nx>group</span><span class=p>.</span><span class=nx>showList</span><span class=p>();</span>
+</span></span></code></pre></td></tr></table></div></div><ul><li>Arrow functions can’t run with <code>new</code>(whic means it can be used as a constructor)</li><li><a href=#arrow-functions-vs-bind><h4 id=arrow-functions-vs-bind><span class=hanchor arialabel=Anchor># </span>`Arrow functions VS bind</h4></a><ul><li>There’s a subtle difference between an arrow function <code>=></code> and a regular function called with <code>.bind(this)</code>:<ul><li><code>.bind(this)</code> creates a “bound version” of the function.</li><li>The arrow <code>=></code> doesn’t create any binding. The function simply doesn’t have <code>this</code>. The lookup of <code>this</code> is made exactly the same way as a regular variable search: in the outer lexical environment.</li></ul></li></ul></li><li><a href=https://javascript.info/arrow-functions#arrows-have-no-arguments rel=noopener>Arrows have no “arguments”</a></li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>function</span> <span class=nx>defer</span><span class=p>(</span><span class=nx>f</span><span class=p>,</span> <span class=nx>ms</span><span class=p>)</span> <span class=p>{</span> 
+</span></span><span class=line><span class=cl>	<span class=k>return</span> <span class=kd>function</span><span class=p>()</span> <span class=p>{</span> 
+</span></span><span class=line><span class=cl>		<span class=nx>setTimeout</span><span class=p>(()</span> <span class=p>=&gt;</span> <span class=nx>f</span><span class=p>.</span><span class=nx>apply</span><span class=p>(</span><span class=k>this</span><span class=p>,</span> <span class=nx>arguments</span><span class=p>),</span> <span class=nx>ms</span><span class=p>);</span> 
+</span></span><span class=line><span class=cl>	<span class=p>};</span> 
+</span></span><span class=line><span class=cl><span class=p>}</span> 
+</span></span><span class=line><span class=cl><span class=kd>function</span> <span class=nx>sayHi</span><span class=p>(</span><span class=nx>who</span><span class=p>)</span> <span class=p>{</span> 
+</span></span><span class=line><span class=cl>	<span class=nx>alert</span><span class=p>(</span><span class=s1>&#39;Hello, &#39;</span> <span class=o>+</span> <span class=nx>who</span><span class=p>);</span> 
+</span></span><span class=line><span class=cl><span class=p>}</span> 
+</span></span><span class=line><span class=cl><span class=kd>let</span> <span class=nx>sayHiDeferred</span> <span class=o>=</span> <span class=nx>defer</span><span class=p>(</span><span class=nx>sayHi</span><span class=p>,</span> <span class=mi>2000</span><span class=p>);</span> 
+</span></span><span class=line><span class=cl><span class=nx>sayHiDeferred</span><span class=p>(</span><span class=s2>&#34;John&#34;</span><span class=p>);</span> <span class=c1>// Hello, John after 2 seconds
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=c1>//Without arrow function
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kd>function</span> <span class=nx>defer</span><span class=p>(</span><span class=nx>f</span><span class=p>,</span> <span class=nx>ms</span><span class=p>)</span> <span class=p>{</span> 
+</span></span><span class=line><span class=cl>	<span class=k>return</span> <span class=kd>function</span><span class=p>(...</span><span class=nx>args</span><span class=p>)</span> <span class=p>{</span> 
+</span></span><span class=line><span class=cl>		<span class=kd>let</span> <span class=nx>ctx</span> <span class=o>=</span> <span class=k>this</span><span class=p>;</span> 
+</span></span><span class=line><span class=cl>		<span class=nx>setTimeout</span><span class=p>(</span><span class=kd>function</span><span class=p>()</span> <span class=p>{</span> 
+</span></span><span class=line><span class=cl>			<span class=k>return</span> <span class=nx>f</span><span class=p>.</span><span class=nx>apply</span><span class=p>(</span><span class=nx>ctx</span><span class=p>,</span> <span class=nx>args</span><span class=p>);</span> 
+</span></span><span class=line><span class=cl>		<span class=p>},</span> <span class=nx>ms</span><span class=p>);</span> 
+</span></span><span class=line><span class=cl>	<span class=p>};</span> 
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><a href=#function-prototype-methods><h2 id=function-prototype-methods><span class=hanchor arialabel=Anchor># </span>Function Prototype Methods</h2></a><a href=#functionprototypeapplythisarg-arr><h3 id=functionprototypeapplythisarg-arr><span class=hanchor arialabel=Anchor># </span>Function.prototype.apply(thisArg, arr)</h3></a><ul><li>The <strong><code>apply()</code></strong> method calls the specified function with a given <code>this</code> value, and <code>arguments</code> provided as an array (or an 
+<a href=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects rel=noopener>array-like object</a>).</li><li>Uses</li><li><a href=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply#using_apply_to_append_an_array_to_another rel=noopener>Using apply() to append an array to another</a></li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>const</span> <span class=nx>array</span> <span class=o>=</span> <span class=p>[</span><span class=s2>&#34;a&#34;</span><span class=p>,</span> <span class=s2>&#34;b&#34;</span><span class=p>];</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>elements</span> <span class=o>=</span> <span class=p>[</span><span class=mi>0</span><span class=p>,</span> <span class=mi>1</span><span class=p>,</span> <span class=mi>2</span><span class=p>];</span>
+</span></span><span class=line><span class=cl><span class=nx>array</span><span class=p>.</span><span class=nx>push</span><span class=p>.</span><span class=nx>apply</span><span class=p>(</span><span class=nx>array</span><span class=p>,</span> <span class=nx>elements</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>info</span><span class=p>(</span><span class=nx>array</span><span class=p>);</span> <span class=c1>// [&#34;a&#34;, &#34;b&#34;, 0, 1, 2]
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=c1>// Same effect as spread arg
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kr>const</span> <span class=nx>array</span> <span class=o>=</span> <span class=p>[</span><span class=s2>&#34;a&#34;</span><span class=p>,</span> <span class=s2>&#34;b&#34;</span><span class=p>];</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>elements</span> <span class=o>=</span> <span class=p>[</span><span class=mi>0</span><span class=p>,</span> <span class=mi>1</span><span class=p>,</span> <span class=mi>2</span><span class=p>];</span>
+</span></span><span class=line><span class=cl><span class=nx>array</span><span class=p>.</span><span class=nx>push</span><span class=p>(...</span><span class=nx>elements</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>info</span><span class=p>(</span><span class=nx>array</span><span class=p>);</span> <span class=c1>// [&#34;a&#34;, &#34;b&#34;, 0, 1, 2]
+</span></span></span></code></pre></td></tr></table></div></div><ul><li><a href=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply#using_apply_and_built-in_functions rel=noopener>Using apply() and built-in functions</a></li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=c1>// min/max number in an array
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kr>const</span> <span class=nx>numbers</span> <span class=o>=</span> <span class=p>[</span><span class=mi>5</span><span class=p>,</span> <span class=mi>6</span><span class=p>,</span> <span class=mi>2</span><span class=p>,</span> <span class=mi>3</span><span class=p>,</span> <span class=mi>7</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// using Math.min/Math.max apply
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kd>let</span> <span class=nx>max</span> <span class=o>=</span> <span class=nb>Math</span><span class=p>.</span><span class=nx>max</span><span class=p>.</span><span class=nx>apply</span><span class=p>(</span><span class=kc>null</span><span class=p>,</span> <span class=nx>numbers</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=c1>// This about equal to Math.max(numbers[0], …)
+</span></span></span><span class=line><span class=cl><span class=c1>// or Math.max(5, 6, …)
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=kd>let</span> <span class=nx>min</span> <span class=o>=</span> <span class=nb>Math</span><span class=p>.</span><span class=nx>min</span><span class=p>.</span><span class=nx>apply</span><span class=p>(</span><span class=kc>null</span><span class=p>,</span> <span class=nx>numbers</span><span class=p>);</span>
+</span></span></code></pre></td></tr></table></div></div><a href=#functionprototypebindthisarg-optional><h3 id=functionprototypebindthisarg-optional><span class=hanchor arialabel=Anchor># </span>Function.prototype.bind(thisArg, optional&mldr;)</h3></a><ul><li>The <strong><code>bind()</code></strong> method creates a new function that, when called, has its <code>this</code> keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.</li><li></li></ul><a href=#closures><h2 id=closures><span class=hanchor arialabel=Anchor># </span>Closures</h2></a><ul><li>A closure is an expression (most commonly, a function) that can have free variables together with an environment that binds those variables (that &ldquo;closes&rdquo; the expression).</li><li>Inner can access outer, but not vice versa</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=kd>function</span> <span class=nx>addSquares</span><span class=p>(</span><span class=nx>a</span><span class=p>,</span> <span class=nx>b</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=kd>function</span> <span class=nx>square</span><span class=p>(</span><span class=nx>x</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nx>x</span> <span class=o>*</span> <span class=nx>x</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=nx>square</span><span class=p>(</span><span class=nx>a</span><span class=p>)</span> <span class=o>+</span> <span class=nx>square</span><span class=p>(</span><span class=nx>b</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>a</span> <span class=o>=</span> <span class=nx>addSquares</span><span class=p>(</span><span class=mi>2</span><span class=p>,</span> <span class=mi>3</span><span class=p>);</span> <span class=c1>// returns 13
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kr>const</span> <span class=nx>b</span> <span class=o>=</span> <span class=nx>addSquares</span><span class=p>(</span><span class=mi>3</span><span class=p>,</span> <span class=mi>4</span><span class=p>);</span> <span class=c1>// returns 25
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kr>const</span> <span class=nx>c</span> <span class=o>=</span> <span class=nx>addSquares</span><span class=p>(</span><span class=mi>4</span><span class=p>,</span> <span class=mi>5</span><span class=p>);</span> <span class=c1>// returns 41
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=kd>function</span> <span class=nx>outside</span><span class=p>(</span><span class=nx>x</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=kd>function</span> <span class=nx>inside</span><span class=p>(</span><span class=nx>y</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nx>x</span> <span class=o>+</span> <span class=nx>y</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=nx>inside</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>fnInside</span> <span class=o>=</span> <span class=nx>outside</span><span class=p>(</span><span class=mi>3</span><span class=p>);</span> <span class=c1>// Think of it like: give me a function that adds 3 to whatever you give it
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kr>const</span> <span class=nx>result</span> <span class=o>=</span> <span class=nx>fnInside</span><span class=p>(</span><span class=mi>5</span><span class=p>);</span> <span class=c1>// returns 8
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kr>const</span> <span class=nx>result1</span> <span class=o>=</span> <span class=nx>outside</span><span class=p>(</span><span class=mi>3</span><span class=p>)(</span><span class=mi>5</span><span class=p>);</span> <span class=c1>// returns 8
+</span></span></span></code></pre></td></tr></table></div></div><ul><li>in Essence <code>addSquares, outside</code> are function factories. All const variables form closures. They share the same function body definition, but store different <code>lexical environments</code>.</li><li>Name Conflicts - When two arguments or variables in the scopes of a closure have the same name, there is a <em>name conflict</em>. More nested scopes take precedence. So, <code>the innermost scope takes the highest precedence, while the outermost scope takes the lowest</code>. This is the scope chain.</li><li>If an enclosed function defines a variable with the same name as a variable in the outer scope, then there is no way to refer to the variable in the outer scope again. (The inner scope variable &ldquo;overrides&rdquo; the outer one, until the program exits the inner scope.</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=kd>function</span> <span class=nx>outside</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=kr>const</span> <span class=nx>x</span> <span class=o>=</span> <span class=mi>5</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=kd>function</span> <span class=nx>inside</span><span class=p>(</span><span class=nx>x</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nx>x</span> <span class=o>*</span> <span class=mi>2</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=nx>inside</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>outside</span><span class=p>()(</span><span class=mi>10</span><span class=p>);</span> <span class=c1>// returns 20 instead of 10
+</span></span></span></code></pre></td></tr></table></div></div><ul><li>An object containing methods for manipulating the inner variables of the outer function can be returned.</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=kr>const</span> <span class=nx>createPet</span> <span class=o>=</span> <span class=kd>function</span> <span class=p>(</span><span class=nx>name</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=kd>let</span> <span class=nx>sex</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=kr>const</span> <span class=nx>pet</span> <span class=o>=</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// setName(newName) is equivalent to setName: function (newName)
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=c1>// in this context
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=nx>setName</span><span class=p>(</span><span class=nx>newName</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>name</span> <span class=o>=</span> <span class=nx>newName</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=nx>getName</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=k>return</span> <span class=nx>name</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=nx>getSex</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=k>return</span> <span class=nx>sex</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=nx>setSex</span><span class=p>(</span><span class=nx>newSex</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=k>if</span> <span class=p>(</span><span class=k>typeof</span> <span class=nx>newSex</span> <span class=o>===</span> <span class=s1>&#39;string&#39;</span> <span class=o>&amp;&amp;</span>
+</span></span><span class=line><span class=cl>        <span class=p>(</span><span class=nx>newSex</span><span class=p>.</span><span class=nx>toLowerCase</span><span class=p>()</span> <span class=o>===</span> <span class=s1>&#39;male&#39;</span> <span class=o>||</span> <span class=nx>newSex</span><span class=p>.</span><span class=nx>toLowerCase</span><span class=p>()</span> <span class=o>===</span> <span class=s1>&#39;female&#39;</span><span class=p>))</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>sex</span> <span class=o>=</span> <span class=nx>newSex</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>      <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=p>};</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=nx>pet</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>pet</span> <span class=o>=</span> <span class=nx>createPet</span><span class=p>(</span><span class=s1>&#39;Vivie&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=nx>pet</span><span class=p>.</span><span class=nx>getName</span><span class=p>();</span>                  <span class=c1>// Vivie
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=nx>pet</span><span class=p>.</span><span class=nx>setName</span><span class=p>(</span><span class=s1>&#39;Oliver&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=nx>pet</span><span class=p>.</span><span class=nx>setSex</span><span class=p>(</span><span class=s1>&#39;male&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=nx>pet</span><span class=p>.</span><span class=nx>getSex</span><span class=p>();</span>                   <span class=c1>// male
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=nx>pet</span><span class=p>.</span><span class=nx>getName</span><span class=p>();</span>                  <span class=c1>// Oliver
+</span></span></span></code></pre></td></tr></table></div></div><ul><li>you can use a <code>closure</code> anywhere that you might normally use an object with only a single method. Refer MDN Closure example</li></ul><a href=#emulating-private-methods-with-closures><h2 id=emulating-private-methods-with-closures><span class=hanchor arialabel=Anchor># </span>Emulating private methods with Closures</h2></a><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>const</span> <span class=nx>counter</span> <span class=o>=</span> <span class=p>(</span><span class=kd>function</span> <span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=kd>let</span> <span class=nx>privateCounter</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=kd>function</span> <span class=nx>changeBy</span><span class=p>(</span><span class=nx>val</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>privateCounter</span> <span class=o>+=</span> <span class=nx>val</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>increment</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>changeBy</span><span class=p>(</span><span class=mi>1</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=nx>decrement</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>changeBy</span><span class=p>(</span><span class=o>-</span><span class=mi>1</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=nx>value</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=k>return</span> <span class=nx>privateCounter</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span>
+</span></span><span class=line><span class=cl>  <span class=p>};</span>
+</span></span><span class=line><span class=cl><span class=p>})();</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>counter</span><span class=p>.</span><span class=nx>value</span><span class=p>());</span> <span class=c1>// 0.
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=nx>counter</span><span class=p>.</span><span class=nx>increment</span><span class=p>();</span>
+</span></span><span class=line><span class=cl><span class=nx>counter</span><span class=p>.</span><span class=nx>increment</span><span class=p>();</span>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>counter</span><span class=p>.</span><span class=nx>value</span><span class=p>());</span> <span class=c1>// 2.
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=nx>counter</span><span class=p>.</span><span class=nx>decrement</span><span class=p>();</span>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>counter</span><span class=p>.</span><span class=nx>value</span><span class=p>());</span> <span class=c1>// 1.
+</span></span></span></code></pre></td></tr></table></div></div><ul><li>In the above example, there is a single lexical environment that is shared by the three functions: <code>counter.increment</code>, <code>counter.decrement</code>, and <code>counter.value</code>.</li><li>The shared lexical environment is created in the body of an anonymous function, <em>which is executed as soon as it has been defined</em> (also known as an 
+<a href=https://developer.mozilla.org/en-US/docs/Glossary/IIFE rel=noopener>IIFE</a>). The lexical environment contains two private items: a variable called <code>privateCounter</code>, and a function called <code>changeBy</code>. You can&rsquo;t access either of these private members from outside the anonymous function. Instead, you can access them using the three public functions that are returned from the anonymous wrapper.</li><li>Change the above, to normal function variable and make lexical environments according to one&rsquo;s usecases</li></ul><a href=#creating-closures-in-a-loop><h2 id=creating-closures-in-a-loop><span class=hanchor arialabel=Anchor># </span>Creating closures in a loop</h2></a><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>function</span> <span class=nx>showHelp</span><span class=p>(</span><span class=nx>help</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nb>document</span><span class=p>.</span><span class=nx>getElementById</span><span class=p>(</span><span class=s1>&#39;help&#39;</span><span class=p>).</span><span class=nx>textContent</span> <span class=o>=</span> <span class=nx>help</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>function</span> <span class=nx>setupHelp</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=kd>var</span> <span class=nx>helpText</span> <span class=o>=</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span> <span class=nx>id</span><span class=o>:</span> <span class=s1>&#39;email&#39;</span><span class=p>,</span> <span class=nx>help</span><span class=o>:</span> <span class=s1>&#39;Your email address&#39;</span> <span class=p>},</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span> <span class=nx>id</span><span class=o>:</span> <span class=s1>&#39;name&#39;</span><span class=p>,</span> <span class=nx>help</span><span class=o>:</span> <span class=s1>&#39;Your full name&#39;</span> <span class=p>},</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span> <span class=nx>id</span><span class=o>:</span> <span class=s1>&#39;age&#39;</span><span class=p>,</span> <span class=nx>help</span><span class=o>:</span> <span class=s1>&#39;Your age (you must be over 16)&#39;</span> <span class=p>},</span>
+</span></span><span class=line><span class=cl>  <span class=p>];</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=k>for</span> <span class=p>(</span><span class=kd>var</span> <span class=nx>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>i</span> <span class=o>&lt;</span> <span class=nx>helpText</span><span class=p>.</span><span class=nx>length</span><span class=p>;</span> <span class=nx>i</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// Culprit is the use of `var` on this line
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=kd>var</span> <span class=nx>item</span> <span class=o>=</span> <span class=nx>helpText</span><span class=p>[</span><span class=nx>i</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>    <span class=nb>document</span><span class=p>.</span><span class=nx>getElementById</span><span class=p>(</span><span class=nx>item</span><span class=p>.</span><span class=nx>id</span><span class=p>).</span><span class=nx>onfocus</span> <span class=o>=</span> <span class=kd>function</span> <span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>showHelp</span><span class=p>(</span><span class=nx>item</span><span class=p>.</span><span class=nx>help</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=p>};</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>setupHelp</span><span class=p>();</span>
+</span></span></code></pre></td></tr></table></div></div><ul><li><p>If you try this code out, you&rsquo;ll see that it doesn&rsquo;t work as expected. No matter what field you focus on, the message about your age will be displayed.</p></li><li><p>The reason for this is that the functions assigned to <code>onfocus</code> form closures; they consist of the function definition and the captured environment from the <code>setupHelp</code> function&rsquo;s scope. Three closures have been created by the loop, but each one shares the same single lexical environment, which has a variable with changing values (<code>item</code>). This is because the variable <code>item</code> is declared with <code>var</code> and thus has function scope due to hoisting. The value of <code>item.help</code> is determined when the <code>onfocus</code> callbacks are executed. Because the loop has already run its course by that time, the <code>item</code>variable object (shared by all three closures) has been left pointing to the last entry in the <code>helpText</code>list.</p></li><li><p>1ST SOLUTION (SEPERATE FUNTIONS)</p></li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>function</span> <span class=nx>showHelp</span><span class=p>(</span><span class=nx>help</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nb>document</span><span class=p>.</span><span class=nx>getElementById</span><span class=p>(</span><span class=s1>&#39;help&#39;</span><span class=p>).</span><span class=nx>textContent</span> <span class=o>=</span> <span class=nx>help</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>function</span> <span class=nx>makeHelpCallback</span><span class=p>(</span><span class=nx>help</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=kd>function</span> <span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>showHelp</span><span class=p>(</span><span class=nx>help</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=p>};</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>function</span> <span class=nx>setupHelp</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=kd>var</span> <span class=nx>helpText</span> <span class=o>=</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span> <span class=nx>id</span><span class=o>:</span> <span class=s1>&#39;email&#39;</span><span class=p>,</span> <span class=nx>help</span><span class=o>:</span> <span class=s1>&#39;Your email address&#39;</span> <span class=p>},</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span> <span class=nx>id</span><span class=o>:</span> <span class=s1>&#39;name&#39;</span><span class=p>,</span> <span class=nx>help</span><span class=o>:</span> <span class=s1>&#39;Your full name&#39;</span> <span class=p>},</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span> <span class=nx>id</span><span class=o>:</span> <span class=s1>&#39;age&#39;</span><span class=p>,</span> <span class=nx>help</span><span class=o>:</span> <span class=s1>&#39;Your age (you must be over 16)&#39;</span> <span class=p>},</span>
+</span></span><span class=line><span class=cl>  <span class=p>];</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=k>for</span> <span class=p>(</span><span class=kd>var</span> <span class=nx>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>i</span> <span class=o>&lt;</span> <span class=nx>helpText</span><span class=p>.</span><span class=nx>length</span><span class=p>;</span> <span class=nx>i</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=kd>var</span> <span class=nx>item</span> <span class=o>=</span> <span class=nx>helpText</span><span class=p>[</span><span class=nx>i</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>    <span class=nb>document</span><span class=p>.</span><span class=nx>getElementById</span><span class=p>(</span><span class=nx>item</span><span class=p>.</span><span class=nx>id</span><span class=p>).</span><span class=nx>onfocus</span> <span class=o>=</span> <span class=nx>makeHelpCallback</span><span class=p>(</span><span class=nx>item</span><span class=p>.</span><span class=nx>help</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>setupHelp</span><span class=p>();</span>
+</span></span></code></pre></td></tr></table></div></div><ul><li>2ND SOLUTION (ANONYMOUS CLOSURES)</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>function</span> <span class=nx>showHelp</span><span class=p>(</span><span class=nx>help</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nb>document</span><span class=p>.</span><span class=nx>getElementById</span><span class=p>(</span><span class=s1>&#39;help&#39;</span><span class=p>).</span><span class=nx>textContent</span> <span class=o>=</span> <span class=nx>help</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>function</span> <span class=nx>setupHelp</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=kd>var</span> <span class=nx>helpText</span> <span class=o>=</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span> <span class=nx>id</span><span class=o>:</span> <span class=s1>&#39;email&#39;</span><span class=p>,</span> <span class=nx>help</span><span class=o>:</span> <span class=s1>&#39;Your email address&#39;</span> <span class=p>},</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span> <span class=nx>id</span><span class=o>:</span> <span class=s1>&#39;name&#39;</span><span class=p>,</span> <span class=nx>help</span><span class=o>:</span> <span class=s1>&#39;Your full name&#39;</span> <span class=p>},</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span> <span class=nx>id</span><span class=o>:</span> <span class=s1>&#39;age&#39;</span><span class=p>,</span> <span class=nx>help</span><span class=o>:</span> <span class=s1>&#39;Your age (you must be over 16)&#39;</span> <span class=p>},</span>
+</span></span><span class=line><span class=cl>  <span class=p>];</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=k>for</span> <span class=p>(</span><span class=kd>var</span> <span class=nx>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>i</span> <span class=o>&lt;</span> <span class=nx>helpText</span><span class=p>.</span><span class=nx>length</span><span class=p>;</span> <span class=nx>i</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=p>(</span><span class=kd>function</span> <span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=kd>var</span> <span class=nx>item</span> <span class=o>=</span> <span class=nx>helpText</span><span class=p>[</span><span class=nx>i</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>      <span class=nb>document</span><span class=p>.</span><span class=nx>getElementById</span><span class=p>(</span><span class=nx>item</span><span class=p>.</span><span class=nx>id</span><span class=p>).</span><span class=nx>onfocus</span> <span class=o>=</span> <span class=kd>function</span> <span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>showHelp</span><span class=p>(</span><span class=nx>item</span><span class=p>.</span><span class=nx>help</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>      <span class=p>};</span>
+</span></span><span class=line><span class=cl>    <span class=p>})();</span> <span class=c1>// Immediate event listener attachment with the current value of item (preserved until iteration).
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>setupHelp</span><span class=p>();</span>
+</span></span></code></pre></td></tr></table></div></div><ul><li>3RD SOLUTION (USE CONST & LET)</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>function</span> <span class=nx>showHelp</span><span class=p>(</span><span class=nx>help</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nb>document</span><span class=p>.</span><span class=nx>getElementById</span><span class=p>(</span><span class=s1>&#39;help&#39;</span><span class=p>).</span><span class=nx>textContent</span> <span class=o>=</span> <span class=nx>help</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>function</span> <span class=nx>setupHelp</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=kr>const</span> <span class=nx>helpText</span> <span class=o>=</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span> <span class=nx>id</span><span class=o>:</span> <span class=s1>&#39;email&#39;</span><span class=p>,</span> <span class=nx>help</span><span class=o>:</span> <span class=s1>&#39;Your email address&#39;</span> <span class=p>},</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span> <span class=nx>id</span><span class=o>:</span> <span class=s1>&#39;name&#39;</span><span class=p>,</span> <span class=nx>help</span><span class=o>:</span> <span class=s1>&#39;Your full name&#39;</span> <span class=p>},</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span> <span class=nx>id</span><span class=o>:</span> <span class=s1>&#39;age&#39;</span><span class=p>,</span> <span class=nx>help</span><span class=o>:</span> <span class=s1>&#39;Your age (you must be over 16)&#39;</span> <span class=p>},</span>
+</span></span><span class=line><span class=cl>  <span class=p>];</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=k>for</span> <span class=p>(</span><span class=kd>let</span> <span class=nx>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>i</span> <span class=o>&lt;</span> <span class=nx>helpText</span><span class=p>.</span><span class=nx>length</span><span class=p>;</span> <span class=nx>i</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=kr>const</span> <span class=nx>item</span> <span class=o>=</span> <span class=nx>helpText</span><span class=p>[</span><span class=nx>i</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>    <span class=nb>document</span><span class=p>.</span><span class=nx>getElementById</span><span class=p>(</span><span class=nx>item</span><span class=p>.</span><span class=nx>id</span><span class=p>).</span><span class=nx>onfocus</span> <span class=o>=</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>showHelp</span><span class=p>(</span><span class=nx>item</span><span class=p>.</span><span class=nx>help</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=p>};</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>setupHelp</span><span class=p>();</span>
+</span></span></code></pre></td></tr></table></div></div><a href=#using-arguments-object><h2 id=using-arguments-object><span class=hanchor arialabel=Anchor># </span>Using <em>arguments</em> object</h2></a><ul><li>The arguments of a function are maintained in an array-like object.</li><li><code>arguments[i]</code></li><li>The total number of arguments is indicated by <code>arguments.length</code>.</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=kd>function</span> <span class=nx>myConcat</span><span class=p>(</span><span class=nx>separator</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=kd>let</span> <span class=nx>result</span> <span class=o>=</span> <span class=s1>&#39;&#39;</span><span class=p>;</span> <span class=c1>// initialize list
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=c1>// iterate through arguments
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=k>for</span> <span class=p>(</span><span class=kd>let</span> <span class=nx>i</span> <span class=o>=</span> <span class=mi>1</span><span class=p>;</span> <span class=nx>i</span> <span class=o>&lt;</span> <span class=nx>arguments</span><span class=p>.</span><span class=nx>length</span><span class=p>;</span> <span class=nx>i</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>result</span> <span class=o>+=</span> <span class=nx>arguments</span><span class=p>[</span><span class=nx>i</span><span class=p>]</span> <span class=o>+</span> <span class=nx>separator</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=nx>result</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// returns &#34;red, orange, blue, &#34;
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=nx>myConcat</span><span class=p>(</span><span class=s1>&#39;, &#39;</span><span class=p>,</span> <span class=s1>&#39;red&#39;</span><span class=p>,</span> <span class=s1>&#39;orange&#39;</span><span class=p>,</span> <span class=s1>&#39;blue&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// returns &#34;elephant; giraffe; lion; cheetah; &#34;
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=nx>myConcat</span><span class=p>(</span><span class=s1>&#39;; &#39;</span><span class=p>,</span> <span class=s1>&#39;elephant&#39;</span><span class=p>,</span> <span class=s1>&#39;giraffe&#39;</span><span class=p>,</span> <span class=s1>&#39;lion&#39;</span><span class=p>,</span> <span class=s1>&#39;cheetah&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// returns &#34;sage. basil. oregano. pepper. parsley. &#34;
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=nx>myConcat</span><span class=p>(</span><span class=s1>&#39;. &#39;</span><span class=p>,</span> <span class=s1>&#39;sage&#39;</span><span class=p>,</span> <span class=s1>&#39;basil&#39;</span><span class=p>,</span> <span class=s1>&#39;oregano&#39;</span><span class=p>,</span> <span class=s1>&#39;pepper&#39;</span><span class=p>,</span> <span class=s1>&#39;parsley&#39;</span><span class=p>);</span>
+</span></span></code></pre></td></tr></table></div></div><a href=#function-parameters><h2 id=function-parameters><span class=hanchor arialabel=Anchor># </span>Function Parameters</h2></a><ul><li>Default parameter = <code>undefined</code> unless defined and set as <code>function(a, b=1)</code></li><li>Rest parameter = <code>function(a, ...b)</code></li></ul><a href=#iife><h2 id=iife><span class=hanchor arialabel=Anchor># </span>IIFE</h2></a><ul><li><p>Use cases:</p><ul><li>Avoid polluting the global namespace</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=p>(()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=c1>// some initiation code
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=kd>let</span> <span class=nx>firstVariable</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=kd>let</span> <span class=nx>secondVariable</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>})();</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// firstVariable and secondVariable will be discarded after the function is executed.
+</span></span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>Execute an async function
+</span></span><span class=line><span class=cl>`js
+</span></span><span class=line><span class=cl>nst getFileStream = async (url) =&gt; {
+</span></span><span class=line><span class=cl> implementation
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>sync () =&gt; {
+</span></span><span class=line><span class=cl>nst stream = await getFileStream(&#34;https://domain.name/path/file.ext&#34;);
+</span></span><span class=line><span class=cl>r await (const chunk of stream) {
+</span></span><span class=line><span class=cl>nsole.log({ chunk });
+</span></span><span class=line><span class=cl>();
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>THe module pattern
+</span></span><span class=line><span class=cl>`js
+</span></span><span class=line><span class=cl>nst makeWithdraw = (balance) =&gt;
+</span></span><span class=line><span class=cl>((copyBalance) =&gt; {
+</span></span><span class=line><span class=cl> let balance = copyBalance; // This variable is private
+</span></span><span class=line><span class=cl> const doBadThings = () =&gt; {
+</span></span><span class=line><span class=cl>   console.log(&#34;I will do bad things with your money&#34;);
+</span></span><span class=line><span class=cl> };
+</span></span><span class=line><span class=cl> doBadThings();
+</span></span><span class=line><span class=cl> return {
+</span></span><span class=line><span class=cl>   withdraw(amount) {
+</span></span><span class=line><span class=cl>     if (balance &gt;= amount) {
+</span></span><span class=line><span class=cl>       balance -= amount;
+</span></span><span class=line><span class=cl>       return balance;
+</span></span><span class=line><span class=cl>     }
+</span></span><span class=line><span class=cl>     return &#34;Insufficient money&#34;;
+</span></span><span class=line><span class=cl>   },
+</span></span><span class=line><span class=cl> };
+</span></span><span class=line><span class=cl>})(balance);
+</span></span></code></pre></td></tr></table></div></div></li></ul><p>const firstAccount = makeWithdraw(100); // &ldquo;I will do bad things with your money&rdquo;
+console.log(firstAccount.balance); // undefined
+console.log(firstAccount.withdraw(20)); // 80
+console.log(firstAccount.withdraw(30)); // 50
+console.log(firstAccount.doBadThings); // undefined; this method is private
+const secondAccount = makeWithdraw(20); // &ldquo;I will do bad things with your money&rdquo;
+console.log(secondAccount.withdraw(30)); // &ldquo;Insufficient money&rdquo;
+console.log(secondAccount.withdraw(20)); // 0
+```</p><a href=#template-literals><h2 id=template-literals><span class=hanchor arialabel=Anchor># </span>Template literals</h2></a><ul><li>backtick could hold expressions using <code>${}</code></li></ul><a href=#strict-mode><h2 id=strict-mode><span class=hanchor arialabel=Anchor># </span><code>strict</code> mode</h2></a><p>To fully enable all features of modern JavaScript, we should start scripts with <code>"use strict"</code>.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=s1>&#39;use strict&#39;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>...</span>
+</span></span></code></pre></td></tr></table></div></div><ul><li>Ensure that “use strict” is at the top</li><li>There’s no way to cancel <code>use strict</code>
+Modern JavaScript supports “classes” and “modules” – advanced language structures (we’ll surely get to them), that enable <code>use strict</code> automatically. So we don’t need to add the <code>"use strict"</code> directive, if we use them.</li></ul><p><strong>So, for now <code>"use strict";</code> is a welcome guest at the top of your scripts. Later, when your code is all in classes and modules, you may omit it.</strong></p><a href=#asynchronous-javascript><h2 id=asynchronous-javascript><span class=hanchor arialabel=Anchor># </span>Asynchronous Javascript</h2></a><a href=#web-workers><h3 id=web-workers><span class=hanchor arialabel=Anchor># </span>Web Workers</h3></a><ul><li>Javascript has introduced a new concept to prevent the limitation we are facing, that is, <code>Web Workers. </code>Web Workers (threads in js) are mainly used <code>to perform CPU-intensiveJavascript tasks</code>. They <code>can perform long-running tasks without affecting or blocking the main execution thread.</code></li></ul><p>Using a Constructor, we can create a worker object, which will run a js file. This js file includes code to run the worker thread; these workers run in some other global context that is different from the current window.\</p><p>However, Node.js built-in asynchronous I/O operations are more efficient than Workers can be. Web workers are not of much help with I/O-intensive work.</p><p>See <a class="internal-link broken">Asynchronous JS</a>
+for events, promise, setTimeout</p><a href=#personal-notes><h2 id=personal-notes><span class=hanchor arialabel=Anchor># </span>Personal Notes</h2></a><ul><li>Block has global scope</li><li>Labeled loops like java</li><li>Return condition must be in the same line</li><li>Functions are first class objects</li><li>Closures are functions inside function which can run even if outer
+function run is over</li><li>Objects can contain functions.</li><li>Functions attached to an object can access object variables using
+<strong>[this]{.underline}</strong> keyword</li><li>Functions can also be attached to objects afterwards and access
+object properties using <strong>[this]{.underline}</strong> keyword</li><li><strong>[Call]{.underline}</strong> and <strong>[apply]{.underline}</strong> keywords can also
+be used to execute a function attaching an object temporarily</li><li>Use <strong>[bind]{.underline}</strong> partially or fully bind functions to an
+object</li><li><strong>[new]{.underline}</strong> keyword with function call can be used for
+creating constructors which creates new objects and made available
+using <strong>[this]{.underline}</strong> keyword</li><li>Javascript instance + inheritence = prototype</li><li><strong>[__proto__]{.underline}</strong> keyword is used to attach prototypes
+with objects. Changes to prototypes are visible to everyone. The
+<em><strong>[for/in]{.underline}</strong></em> **** statement allows iterations over
+properties of an object. hasOwnProperty function can be used to
+exclude prototype properties from objects.</li><li>The first is Object.create, which is a recent addition to Js and not
+available in all implementations yet. <em><strong>var my0bj = Object.create
+(myPrototype);</strong></em>\</li><li>The second way, which works anywhere, has to do with constructors.
+Constructors have a property called prototype. This is *not* the
+prototype of the constructor function itself; instead, it's the
+prototype that new objects are given when they're created with that
+constructor and the new keyword. <em><strong>MyConstructor.prototype = {
+myNumber: 5, getMyNumber: function(){ return this.myNumber; } }; var
+myNewObj2 = new MyConstructor(); myNewObj2.getMyNumber(); //=5
+myNewObj2.myNumber = 6; myNewobj2.getMyNumber(); //=6</strong></em></li></ul><a href=#transpilers-and-polyfills><h2 id=transpilers-and-polyfills><span class=hanchor arialabel=Anchor># </span>Transpilers and polyfills</h2></a><a href=#transpilers><h3 id=transpilers><span class=hanchor arialabel=Anchor># </span>Transpilers</h3></a><ul><li>A 
+<a href=https://en.wikipedia.org/wiki/Source-to-source_compiler rel=noopener>transpiler</a> is a special piece of software that translates source code to another source code. It can parse (“read and understand”) modern code and rewrite it using older syntax constructs, so that it’ll also work in outdated engines.
+E.g. JavaScript before year 2020 didn’t have the “nullish coalescing operator” <code>??</code>. So, if a visitor uses an outdated browser, it may fail to understand the code like <code>height = height ?? 100</code>.</li></ul><p>A transpiler would analyze our code and rewrite <code>height ?? 100</code> into <code>(height !<mark> undefined && height !</mark> null) ? height : 100</code>.
+Speaking of names, 
+<a href=https://babeljs.io/ rel=noopener>Babel</a> is one of the most prominent transpilers out there.</p><p>Modern project build systems, such as 
+<a href=https://webpack.js.org/ rel=noopener>webpack</a>, provide a means to run a transpiler automatically on every code change, so it’s very easy to integrate into the development process.</p><a href=#polyfills><h3 id=polyfills><span class=hanchor arialabel=Anchor># </span>Polyfills</h3></a><p>New language features may include not only syntax constructs and operators, but also built-in functions.</p><p>For example, <code>Math.trunc(n)</code> is a function that “cuts off” the decimal part of a number, e.g <code>Math.trunc(1.23)</code> returns <code>1</code>.</p><p>In some (very outdated) JavaScript engines, there’s no <code>Math.trunc</code>, so such code will fail.</p><p>As we’re talking about new functions, not syntax changes, there’s no need to transpile anything here. We just need to declare the missing function.</p><p>A script that updates/adds new functions is called “polyfill”. It “fills in” the gap and adds missing implementations.</p><p>Two interesting polyfill libraries are:</p><ul><li><a href=https://github.com/zloirock/core-js rel=noopener>core js</a> that supports a lot, allows to include only needed features.</li><li><a href=https://polyfill.io/ rel=noopener>polyfill.io</a> service that provides a script with polyfills, depending on the features and user’s browser.</li></ul><hr><a href=#references><h2 id=references><span class=hanchor arialabel=Anchor># </span>References:</h2></a></article><hr><div class=page-end id=footer><div class=backlinks-container><h3>Backlinks</h3><ul class=backlinks><li><a href=/quartz// data-ctx=Javascript data-src=/ class=internal-link>🪴 Quartz 3.3</a></li></ul></div><div><script src=https://cdn.jsdelivr.net/npm/d3@6.7.0/dist/d3.min.js integrity="sha256-+7jaYCp29O1JusNWHaYtgUn6EhuP0VaFuswhNV06MyI=" crossorigin=anonymous></script><h3>Interactive Graph</h3><div id=graph-container></div><style>:root{--g-node:var(--secondary);--g-node-active:var(--primary);--g-node-inactive:var(--visited);--g-link:var(--outlinegray);--g-link-active:#5a7282}</style><script src=https://abhishek0010.github.io/quartz/js/graph.6579af7b10c818dbd2ca038702db0224.js></script></div></div><div id=contact_buttons><footer><p>Made by Jacky Zhao using <a href=https://github.com/jackyzha0/quartz>Quartz</a>, © 2023</p><ul><li><a href=https://abhishek0010.github.io/quartz/>Home</a></li><li><a href=https://twitter.com/_jzhao>Twitter</a></li><li><a href=https://github.com/jackyzha0>GitHub</a></li></ul></footer></div></div></body></html>
